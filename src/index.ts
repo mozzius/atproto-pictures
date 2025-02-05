@@ -68,7 +68,7 @@ async function fetchDidDocument(did: string): Promise<DidDocument | null> {
 }
 
 function getPdsUrlFromDidDoc(didDoc: DidDocument) {
-	const service = didDoc.service?.find((s) => s.type === 'AtprotoPersonalDataServer');
+	const service = didDoc?.service?.find((s) => s.type === 'AtprotoPersonalDataServer');
 	if (!service) return null;
 	return service.serviceEndpoint;
 }
