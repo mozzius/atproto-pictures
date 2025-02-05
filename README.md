@@ -14,3 +14,4 @@ Simply visit `https://atproto.pictures/img/<DID>/<CID>` to get the image. The im
 
 1. _Cache the PDS resolution_. Use Worker KV or something.
 2. _Adjust the quality settings_. This example is ultra compressed, for a laugh. Also costs. But mostly laughs.
+3. _Verify the CID_. In a production setting, you will want to verify that the blob that the PDS returns actually matches the CID - theoretically, it might not! The simplest way to do this is to load the blob into memory and hash it, and make sure it matches. Cache this heavily!
